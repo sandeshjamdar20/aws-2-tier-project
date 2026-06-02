@@ -53,7 +53,7 @@ module "ec2" {
 
 module "eks" {
   source                 = "./eks"
-  cluster_name           = "my-eks-cluster"
+  cluster_name           = "my-eks-cluster2"
   subnet_ids             = module.vpc.public_subnet_ids
   cluster_sg_id          = module.security_group.eks_cluster_sg_id
   node_sg_id             = module.security_group.eks_node_sg_id

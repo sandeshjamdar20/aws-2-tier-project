@@ -78,7 +78,7 @@ resource "aws_eks_node_group" "eks_nodegroup" {
   }
 
   instance_types = ["t2.medium"]
-  disk_size      = 40
+  disk_size      = 30
 
 #   # Optional SSH access
 #   remote_access {

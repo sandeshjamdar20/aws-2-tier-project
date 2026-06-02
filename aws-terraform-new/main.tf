@@ -44,11 +44,11 @@ module "security_group" {
 
 module "ec2" {
   source             = "./ec2"
-  ami_id             = "ami-04b4f1a9cf54c11d0" # Ubuntu 22.04 (us-east-1)
+  ami_id             = "ami-091138d0f0d41ff90" # Ubuntu 22.04 (us-east-1)
   instance_type      = "t2.micro"
   subnet_id          = element(module.vpc.public_subnet_ids, 0)
   security_group_ids = [module.security_group.sg_ec2_sg_ssh_http_id]
-  key_name           = "project-keypair2025"  # create keypair manually & update name here
+  key_name           = "twotaireproject"  # create keypair manually & update name here
 }
 
 module "eks" {
@@ -57,7 +57,7 @@ module "eks" {
   subnet_ids             = module.vpc.public_subnet_ids
   cluster_sg_id          = module.security_group.eks_cluster_sg_id
   node_sg_id             = module.security_group.eks_node_sg_id
-  ssh_key_name           = "deployer-key"
+  ssh_key_name           = "twotaireproject"
   ebs_csi_driver_version = "v1.40.1-eksbuild.1"
 }
 

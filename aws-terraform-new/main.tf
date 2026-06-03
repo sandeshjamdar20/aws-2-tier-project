@@ -63,7 +63,7 @@ module "eks" {
 
 module "rds" {
   source                  = "./rds"
-  db_identifier           = "my-rds-instance"
+  db_identifier           = "my-rds-instance2"
   db_name                 = "appdb"
   db_username             = "vijay"
   db_password             = "Password123" 

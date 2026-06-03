@@ -7,7 +7,7 @@ resource "aws_db_subnet_group" "rds_subnet_group" {
   }
 }
 
-resource "aws_db_instance" "rds_instance" {
+resource "aws_db_instance" "rds_instance2" {
   identifier              = var.db_identifier
   allocated_storage       = var.allocated_storage
   storage_type            = var.storage_type

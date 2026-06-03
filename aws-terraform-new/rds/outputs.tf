@@ -1,9 +1,7 @@
 output "rds_endpoint" {
-  description = "RDS database endpoint"
-  value       = aws_db_instance.rds_instance.endpoint
+  value = aws_db_instance.rds_instance2.endpoint
 }
 
 output "rds_instance_id" {
-  description = "RDS instance identifier"
-  value       = aws_db_instance.rds_instance.id
+  value = aws_db_instance.rds_instance2.id
 }
